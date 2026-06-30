@@ -185,7 +185,7 @@
       color: #43a047;
     }
 
-   
+    /* ===== ПРОЦЕСС ===== */
     .process-block {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -283,6 +283,98 @@
       transform: scale(1.05);
     }
 
+    /* ===== КНОПКА ЗАПИСАТЬСЯ ===== */
+    .btn-block {
+      text-align: center;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 20px 60px;
+      background: linear-gradient(135deg, #2e7d32, #43a047);
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      border-radius: 60px;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      box-shadow: 0 12px 30px rgba(46, 125, 50, 0.30);
+      transition: 0.3s ease;
+      border: 2px solid rgba(255, 255, 255, 0.30);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 45px rgba(46, 125, 50, 0.35);
+      background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0px);
+      box-shadow: 0 8px 20px rgba(46, 125, 50, 0.25);
+    }
+
+    /* ===== ФУТЕР ===== */
+    .footer-contacts {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      text-align: center;
+    }
+
+    .footer-contacts .contact-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-contacts .contact-item .icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .footer-contacts .contact-item .label {
+      color: #1a4d3a;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.7;
+    }
+
+    .footer-contacts .contact-item .value {
+      color: #1a4d3a;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .footer-contacts .contact-item .value:hover {
+      color: #2e7d32;
+    }
+
+    .footer-divider {
+      width: 60px;
+      height: 3px;
+      background: #2e7d32;
+      border-radius: 10px;
+      margin: 0 auto 15px auto;
+      opacity: 0.3;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(46, 125, 50, 0.15);
+      color: #2d4a3e;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
     /* ===== АДАПТИВ ===== */
     @media (max-width: 768px) {
       .rainbow-bg {
@@ -328,6 +420,16 @@
       .glow-spot {
         display: none;
       }
+
+      .btn-primary {
+        padding: 16px 40px;
+        font-size: 1.1rem;
+      }
+
+      .footer-contacts {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -360,6 +462,16 @@
         grid-template-columns: 1fr 1fr;
         gap: 10px;
       }
+
+      .btn-primary {
+        padding: 14px 30px;
+        font-size: 1rem;
+        width: 100%;
+      }
+
+      .footer-contacts .contact-item .value {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
@@ -385,7 +497,7 @@
         <p class="quote">Каждое изделие получается уникальным — как и его создатель</p>
       </div>
 
-
+      <!-- ===== ПРОЦЕСС ===== -->
       <div class="glass-card">
         <h2>Как рождается <span class="highlight">магия из смолы</span></h2>
 
@@ -421,6 +533,46 @@
           <div class="gallery-item">
             <img src="img/figurine.webp" alt="Фигурка из смолы">
           </div>
+        </div>
+      </div>
+
+      <!-- ===== НОВЫЙ БЛОК: КНОПКА ЗАПИСАТЬСЯ ===== -->
+      <div class="glass-card btn-block">
+        <h2>Готовы <span class="highlight">создать чудо</span> своими руками?</h2>
+        <p class="desc" style="margin-bottom: 30px;">
+          Запишитесь на мастер-класс и погрузитесь в мир творчества с эпоксидной смолой
+        </p>
+        <a href="https://new.np-nv.ru/" target="_blank" class="btn-primary">
+          ✦ Записаться на мастер-класс ✦
+        </a>
+      </div>
+
+      <!-- ===== НОВЫЙ БЛОК: ФУТЕР С КОНТАКТАМИ ===== -->
+      <div class="glass-card">
+        <h2 style="margin-bottom: 10px;">Свяжитесь <span class="highlight">с нами</span></h2>
+        <div class="footer-divider"></div>
+        <p class="desc" style="margin-bottom: 30px; font-size: 0.95rem;">
+          Если у вас есть вопросы, позвоните или напишите нам — мы всегда на связи
+        </p>
+
+        <div class="footer-contacts">
+          <div class="contact-item">
+            <div class="label">Телефон</div>
+            <a href="tel:+73466312014" class="value">+7 (3466) 31-20-14</a>
+            <a href="tel:+73466685968" class="value" style="font-weight: 400; font-size: 0.95rem;">+7 (3466) 68-59-68</a>
+          </div>
+          <div class="contact-item">
+            <div class="label">Email</div>
+            <a href="mailto:np-nv@yandex.ru" class="value">np-nv@yandex.ru</a>
+          </div>
+          <div class="contact-item">
+            <div class="label">Адрес</div>
+            <span class="value" style="font-weight: 400; font-size: 0.95rem;">г. Нижневартовск,<br>ул. Мира, д. 4, корп. Б</span>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          АНО ДПО «Новые перспективы» &bull; 2026 &bull; Все права защищены
         </div>
       </div>
 
